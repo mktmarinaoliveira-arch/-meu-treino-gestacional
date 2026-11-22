@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#c92f69">
+<title>Meu Treino Gestacional | BS Power</title>
+<style>
+:root{--pink:#c92f69;--pink2:#f8e7ee;--ink:#29252a;--muted:#777078;--line:#eee6ea;--bg:#faf8f9;--green:#287a5b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:linear-gradient(130deg,#b92760,#e45d8c);color:white;padding:28px 20px 30px}
+.wrap{max-width:980px;margin:auto}header .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.9;font-weight:700}
+h1{font-size:clamp(27px,5vw,40px);line-height:1.08;margin:10px 0 8px}header p{margin:0;opacity:.94;max-width:650px}
+.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.pill{border:1px solid #ffffff65;border-radius:99px;padding:6px 11px;font-size:12px}
+main{padding:22px 16px 60px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-42px;position:relative}
+.stat{background:white;border:1px solid var(--line);border-radius:15px;padding:14px;box-shadow:0 6px 18px #3b17200b}.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+.section-title{font-size:19px;margin:28px 0 12px}
+.notice{background:#fff7e9;border:1px solid #f1dfbf;border-radius:14px;padding:14px 16px;color:#5e4b2c;font-size:13px}
+.tabs{display:flex;gap:8px;overflow:auto;padding:3px 1px 12px;scrollbar-width:thin}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:white;border-radius:12px;padding:10px 14px;font-weight:700;color:var(--muted);cursor:pointer}
+.tab.active{background:var(--pink);border-color:var(--pink);color:white}
+.dayhead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:12px 0}
+.dayhead h2{font-size:22px;margin:0}.dayhead p{color:var(--muted);margin:3px 0 0;font-size:13px}
+.progress{height:7px;background:#f0e8ec;border-radius:10px;overflow:hidden;margin:14px 0 4px}.progress>div{height:100%;width:0;background:var(--pink);transition:width .2s}
+.progresslabel{font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+.group{margin-top:18px}.group h3{font-size:14px;color:var(--pink);text-transform:uppercase;letter-spacing:.07em;margin:0 0 9px}
+.exercise{background:white;border:1px solid var(--line);border-radius:14px;padding:13px 14px;margin:8px 0;display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:start}
+.exercise input{width:18px;height:18px;accent-color:var(--pink);margin:3px 0 0;cursor:pointer}
+.exname{font-weight:700}.details{font-size:12px;color:var(--muted);margin-top:3px}.cue{font-size:13px;margin-top:6px}
+.exlinks{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}.exlinks a{font-size:12px;color:var(--pink);font-weight:700;text-decoration:none}
+.exercise.done{background:#fbf8f9}.exercise.done .exname{text-decoration:line-through;color:#8d858b}
+.dose{font-size:12px;font-weight:700;color:#6e5964;background:#f8edf1;padding:5px 8px;border-radius:8px;white-space:nowrap}
+.info{background:white;border:1px solid var(--line);border-radius:14px;padding:15px;margin-top:14px;font-size:13px}
+textarea{width:100%;min-height:80px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;resize:vertical}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+button.action{border:0;border-radius:10px;padding:10px 14px;background:var(--pink);color:white;font-weight:700;cursor:pointer}
+button.secondary{background:#f2edf0;color:#554b51}
+.safety{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.safety>div{background:white;border:1px solid var(--line);border-radius:14px;padding:15px;font-size:13px}
+.safety h3{margin:0 0 7px;font-size:15px}
+footer{color:var(--muted);font-size:11px;text-align:center;padding:25px 12px}
+@media(max-width:620px){.summary{gap:7px}.stat{padding:11px}.stat b{font-size:19px}.exercise{grid-template-columns:22px 1fr}.dose{grid-column:2;justify-self:start}.safety{grid-template-columns:1fr}.dayhead h2{font-size:19px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="eyebrow">BS Power · Treinamento personalizado</div>
+<h1>Meu treino<br>gestacional</h1>
+<p>Força, condicionamento e bem-estar com acompanhamento da sua tolerância ao esforço.</p>
+<div class="meta"><span class="pill">1º trimestre · ficha-base</span><span class="pill">5 sessões semanais</span><span class="pill">40–50 min por sessão</span></div>
+</div></header>
+<main class="wrap">
+<div class="summary">
+ <div class="stat"><b>05</b><span>dias de treino</span></div>
+ <div class="stat"><b>40–50 min</b><span>duração estimada</span></div>
+ <div class="stat"><b>12–14/20</b><span>esforço percebido (Borg)</span></div>
+</div>
+<h2 class="section-title">Sua semana de treinos</h2>
+<div class="notice"><b>Importante:</b> esta aplicação organiza a ficha recebida, mas não substitui a orientação da obstetra nem a supervisão da profissional de Educação Física. Confirme se o plano continua adequado à fase atual da gestação antes de cada sessão.</div>
+<div class="tabs" id="tabs" role="tablist" aria-label="Dias de treino"></div>
+<section id="workout"></section>
+<h2 class="section-title">Cuidados e sinais de atenção</h2>
+<div class="safety">
+ <div><h3>Antes e durante</h3><ul><li>Confirme que não há sintomas novos ou contraindicação obstétrica.</li><li>Hidrate-se e evite calor excessivo.</li><li>Respire continuamente; não prenda o ar.</li><li>Mantenha intensidade moderada e o teste da fala.</li><li>Adapte carga, posição e amplitude ao conforto.</li></ul></div>
+ <div><h3>Interrompa e procure avaliação</h3><ul><li>Sangramento vaginal ou perda de líquido.</li><li>Tontura persistente, dor no peito ou falta de ar em repouso.</li><li>Dor de cabeça intensa.</li><li>Contrações regulares dolorosas.</li><li>Dor ou inchaço unilateral na panturrilha.</li></ul><b>Sintomas graves exigem atendimento urgente.</b></div>
+</div>
+<div class="info"><b>Assoalho pélvico</b><p>Priorize consciência respiratória e coordenação entre contração e relaxamento. A ficha recomenda individualização com fisioterapeuta pélvica, sem prescrever contrações máximas indiscriminadamente.</p></div>
+<footer>Conteúdo transcrito e organizado a partir da ficha BS Power enviada. Demonstrações abrem uma busca de vídeos no YouTube; confira a técnica com sua treinadora antes de executar.</footer>
+</main>
+<script>
+const days=[
+{key:"seg",name:"Segunda",title:"Inferiores A · força e controle",time:"45–50 min",groups:[
+["Aquecimento",[
+["Bike ergométrica + mobilidade de quadril","6 min","Ritmo leve a moderado"],
+]],
+["Treino principal",[
+["Agachamento goblet para banco","3 × 12–15","Amplitude confortável; expirar ao subir"],
+["Levantamento terra romeno com halteres","3 × 12","Carga submáxima; coluna neutra"],
+["Step-up em plataforma baixa","3 × 12/lado","Sem salto; apoio estável"],
+["Cadeira flexora","3 × 15","Movimento controlado"],
+["Abdução de quadril na máquina","3 × 15","Sem compensar o tronco"],
+["Pallof press em pé","3 × 12/lado","Respiração contínua; sem prender o ar"]
+]],
+["Mobilidade / alongamento",[
+["Mobilidade de quadril 90/90 assistida","1 × 45 s","Sem forçar amplitude"],
+["Mobilidade de tornozelo na parede","1 × 45 s","Sem forçar amplitude"]
+]]],note:"Descanso de 60–90 s; terminar com 3 min de desaceleração. Ajustar pausas e acessórios para respeitar o tempo total."},
+{key:"ter",name:"Terça",title:"Superiores A · força e postura",time:"40–45 min",groups:[
+["Aquecimento",[["Caminhada leve ou bicicleta","5 min","Aquecimento sem impacto"]]],
+["Treino principal",[
+["Remada sentada na polia","3 × 12","Escápulas controladas"],
+["Supino inclinado com halteres","3 × 12","Banco inclinado; sem apneia"],
+["Puxada frontal na polia","3 × 12","Evitar compensações lombares"],
+["Desenvolvimento com halteres sentada","3 × 12","Carga confortável, sem esforço máximo"],
+["Elevação lateral","3 × 15","Controle de movimento"],
+["Rosca bíceps + tríceps na polia","3 × 12 cada","Alternar com pausas"],
+["Bird dog","2 × 8/lado","Sem desconforto abdominal"]
+]],
+["Mobilidade / alongamento",[["Rotação torácica em quatro apoios","1 × 45 s","Sem forçar amplitude"],["Alongamento peitoral na parede","1 × 45 s","Sem forçar amplitude"]]]
+],note:"Descanso de 60–75 s; finalizar com mobilidade torácica leve."},
+{key:"qua",name:"Quarta",title:"Aeróbico de baixo impacto · estabilidade",time:"40–45 min",groups:[
+["Aquecimento",[["Bicicleta ergométrica","8 min","Progressão gradual do aquecimento"]]],
+["Condicionamento",[
+["Air bike ou elíptico","4 × 4 min","Ritmo moderado; 2 min leves entre blocos"],
+["Caminhada leve","5 min","Desacelerar gradualmente"]
+]],
+["Estabilidade e mobilidade",[
+["Remada elástica em pé","2 × 12","Controle postural"],
+["Pallof press","2 × 10/lado","Sem Valsalva"],
+["Mobilidade de quadril e torácica","5 min","Amplitude confortável"],
+["Gato-vaca em quatro apoios","1 × 45 s","Sem forçar amplitude"],
+["Mobilidade de quadril em apoio","1 × 45 s","Sem forçar amplitude"]
+]]
+],note:"Manter capacidade de conversar durante os blocos; sem sprints."},
+{key:"qui",name:"Quinta",title:"Inferiores B · glúteos e estabilidade",time:"45–50 min",groups:[
+["Aquecimento",[["Bike + mobilidade de tornozelo","6 min","Aquecimento progressivo"]]],
+["Treino principal",[
+["Leg press 45°","3 × 12","Amplitude sem compressão desconfortável"],
+["Afundo estático com apoio","3 × 12/lado","Segurar apoio para equilíbrio"],
+["Elevação pélvica com tronco apoiado","3 × 15","Adaptar posição se houver desconforto"],
+["Cadeira extensora","3 × 15","Cadência controlada"],
+["Panturrilha em pé","3 × 15","Com apoio"],
+["Caminhada lateral com miniband","3 × 12 passos/lado","Passos curtos e controle pélvico"]
+]],
+["Mobilidade / alongamento",[["Mobilidade de tornozelo na parede","1 × 45 s","Sem forçar amplitude"],["Alongamento de flexores do quadril com apoio","1 × 45 s","Sem forçar amplitude"]]]
+],note:"Descanso de 60–90 s; finalizar com respiração tranquila."},
+{key:"sex",name:"Sexta",title:"Superiores B · corpo inteiro leve",time:"40–45 min",groups:[
+["Aquecimento",[["Bike ergométrica","5 min","Ritmo leve"]]],
+["Treino principal",[
+["Remada unilateral apoiada","3 × 12/lado","Estabilizar o tronco"],
+["Supino inclinado com halteres / chest press na máquina","3 × 12","Sem esforço máximo"],
+["Puxada na polia com pegada neutra","3 × 12","Sem inclinar excessivamente"],
+["Agachamento para banco","3 × 15","Carga leve a moderada"],
+["Face pull na polia","3 × 15","Controle escapular"],
+["Farmer carry com halteres leves","3 × 30 s","Caminhar devagar, sem apneia"]
+]],
+["Desaceleração / mobilidade",[["Bike leve + mobilidade","6 min","Desaceleração"],["Rotação torácica em quatro apoios","1 × 45 s","Sem forçar amplitude"],["Alongamento peitoral na parede","1 × 45 s","Sem forçar amplitude"]]]
+],note:"Descanso de 60–75 s; encerrar sem exaustão."}
+];
+const tabs=document.getElementById('tabs'), area=document.getElementById('workout');
+let active=0;
+const safe=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function render(){
+ tabs.innerHTML=days.map((d,i)=>`<button class="tab ${i===active?'active':''}" role="tab" aria-selected="${i===active}" onclick="active=${i};render()">${d.name}</button>`).join('');
+ const d=days[active], all=d.groups.flatMap(g=>g[1]), id=d.key;
+ let count=0;
+ const groups=d.groups.map((g,gi)=>`<div class="group"><h3>${g[0]}</h3>${g[1].map((e,ei)=>{const key=`${id}-${gi}-${ei}`,done=localStorage.getItem(key)==='1';if(done)count++;const q=encodeURIComponent(e[0]+' execução exercício demonstração');return `<article class="exercise ${done?'done':''}"><input type="checkbox" ${done?'checked':''} aria-label="Concluir ${safe(e[0])}" onchange="toggle('${key}',this.checked)"><div><div class="exname">${safe(e[0])}</div><div class="details">${safe(e[2])}</div><div class="exlinks"><a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">▶ Ver exemplo em vídeo</a><a href="https://www.google.com/search?tbm=isch&q=${q}" target="_blank" rel="noopener">▧ Ver imagens</a></div></div><span class="dose">${safe(e[1])}</span></article>`}).join('')}</div>`).join('');
+ const pct=Math.round(count/all.length*100);
+ area.innerHTML=`<div class="dayhead"><div><h2>${d.name} · ${d.title}</h2><p>Duração estimada: ${d.time} · ${all.length} itens</p></div></div><div class="progress"><div style="width:${pct}%"></div></div><div class="progresslabel"><span>Progresso do dia</span><b>${count}/${all.length} concluídos · ${pct}%</b></div>${groups}<div class="info"><b>Orientação da sessão</b><p>${safe(d.note)}</p><label for="notes-${id}"><b>Como me senti hoje?</b></label><textarea id="notes-${id}" placeholder="Registre energia, conforto, sintomas ou adaptações...">${safe(localStorage.getItem('notes-'+id)||'')}</textarea><div class="actions"><button class="action" onclick="saveNote('${id}')">Salvar observação</button><button class="action secondary" onclick="resetDay('${id}')">Desmarcar este dia</button></div></div>`;
+}
+function toggle(k,v){localStorage.setItem(k,v?'1':'0');render()}
+function saveNote(id){localStorage.setItem('notes-'+id,document.getElementById('notes-'+id).value);alert('Observação salva neste dispositivo.')}
+function resetDay(id){if(confirm('Desmarcar todos os itens deste dia?')){const d=days.find(x=>x.key===id);d.groups.forEach((g,gi)=>g[1].forEach((e,ei)=>localStorage.removeItem(`${id}-${gi}-${ei}`)));render()}}
+render();
+</script>
+</body></html>
